@@ -13,7 +13,7 @@ whatsnext:
 
 ### Using parameters with an External Adapter
 
-As a contract creator, using an external adapter is no different than creating a request for any other job spec. You will simply need to know which parameters are supported by the adapter. Notice the method below uses `req.add` to create a run parameter for each required value.
+As a contract creator, using an external adapter is no different than creating a request for any other job spec. You will simply need to know which parameters are supported by the adapter. Notice the method below uses `req.add` to create a run parameter for each required value. Notice this contract is set to communicate with an ``Oracle.sol`` contract, not an ``Operator.sol``!
 
 <!-- prettier-ignore -->
 ```solidity
