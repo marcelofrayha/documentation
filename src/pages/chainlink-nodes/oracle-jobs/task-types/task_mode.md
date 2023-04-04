@@ -43,3 +43,12 @@ Given a `values` array containing `[ 2, 5, 2, "foo", "foo" "bar", "foo", 2 ]`, t
   "occurrences": 3
 }
 ```
+
+**Using the Output**
+
+To pass the results array to ethabiencode task you must specify in the ABI that the data is an array and point the data parameter to "YOUR_MODE_TASK.results" like this:
+
+<!-- prettier-ignore -->
+```toml
+encode_mode_task [type="ethabiencode" abi="(bytes32 requestId, uint256[] _data)" data="{\\"requestId\\": $(decode_log.requestId), \\"_data\\": $(YOUR_MODE_TASK.results)}"]
+```
